@@ -26,12 +26,16 @@
         background-color: rgba(245, 245, 245, 0.773);
         padding: 4px;
     }
+
+    span {
+        text-decoration: underline;
+    }
 </style>
 
 <body>
     <marquee behavior="alternate" direction="12">
 
-        <h1> Lets Learn JS Together!</h1>
+        <h1> Time to get Hired!</h1>
     </marquee>
     <main>
 
@@ -47,6 +51,16 @@
         <h2 style="text-align:center ;">
 
             ADD <i>'use strict' </i> ON THE FIRST LINE OF YOUR SCRIPT FILE TO PREVENT BUGS! </h2>
+
+        <div>
+            <h3>Expressions/Statements</h3>
+            <p>Expression produce values <span>(2+2) produces a value of 4 || the end result of a function also produces
+                    a value</span> ...
+                statements used to control
+                the
+                flow of a script or a program =
+                functions..if/else</p>
+        </div>
         <div>
             <h2>
                 Data Types
@@ -93,7 +107,7 @@
 
             <br>
             <i>Unless its being used for an object/array the values are mutable.</i>
-            <p>It's mostly used for functions or for other values that won't </p>
+            <p>It's mostly used for functions or for others that won't change the value.</p>
 
             <h4>Let</h4>
             <i>Value is mutable.</i>
@@ -337,8 +351,97 @@
             <h2>Coercion</h2>
         </div>
 
+        <!-- .flat()  creates a new array  by concatenating a nested a array to one (only goes one lvl deep but can be changed)  [1,2,[4,5]] 
+        flat(2) <-- add number to go deeper
+        -->
+        <!-- 
+            flatMap = map + flat and *only goes 1 lvl deep*
+        -->
+        <!-- 
+            .sort() mutates array and sorts it Alphabetically
+         -->
+        <!--
+         Can save callbacks in variables 
+        exp:
+        const movements = [1,-2,6,10] 
+        const blue = mov => mov > 0
+        movements.filter(blue) 
+        -->
+        <!-- 
+        slice() creates a shallow copy, kinda like a spread operator ot acts like slice too
+        const animals = ['ant', 'bison', 'camel', 'duck', 'elephant]
+        console.log(animals.slice(2));
+        expected output: Array ["camel", "duck", "elephant"]
+         -->
+        <!-- 
+         split(' ') basically turns string to array
+         const str = 'Hello Bobby James';
+         console.log(str.split(' '));
+         result: ['Hello', 'Bobby', 'James']
+         -->
+        <!-- 
+            Call method to be able to use this key word for methods in obj
+            const eurowings = {
+              airline: 'Eurowings',
+              code: 'EW',
+              bookings: [],
+            };
+            book.call(eurowings, 23, 'Jack Sparrow');
+            console.log(eurowings);
+          -->
+        <!-- 
+            Bind does not call the function, it creates a new function with the key word THIS thats bind to it
+          -->
 
-        <!-- Expression produce values =  2 ... statements used to control the flow of a script or a program = functions..if/else -->
+        <!-- 
+            Apply method same as the call but it takes an array of data
+
+            const flightData = [583, 'George Myers'];
+            book.apply(swiss, flightData);
+           -->
+        <!-- 
+            *Closures makes sure function doesn't lose connection to variables that existed at the function birthplace *
+            -->
+
+        <!-- 
+                variable named = _
+                
+                means its a throwaway variable
+             -->
+
+        <!-- 
+                Mutate Original Array
+
+                push(end)   pop(end)
+                unshift(start) shift (start)
+                splice(any)  reverse/ sort/ fill
+              -->
+        <!--
+                 To transform to value
+                reduce(acc, cur)
+
+                A New String 
+                join()
+            -->
+        <!--
+                 Know if array includes
+             includes(based on value)
+             some/ every (test condition)
+             (some = tests whether at least one element in the array passes the test )
+                -->
+        <!-- 
+                An Array Index
+
+                indexOf(based on value)
+                findIndex(test condition)
+                
+
+                An Array Element
+                find(test condition)
+                first element to pass the test
+               -->
+
+
     </main>
     <script src="./fundamentals.js"></script>
 
@@ -369,10 +472,3 @@
 </body>
 
 </html>
-<!-- <div>
-    <h2> How to get started? </h2>
-    <p>
-        Open your Browser and Right Click then choose Inspect, adn finally pick Console to see the magic!
-    </p>
-
-</div> -->
