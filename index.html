@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js-Notes</title>
+    <script defer src="./fundamentals.js"></script>
+    <!--
+         *** Put your JS script at the head with the word defer in it***
+         Why? Because scripts are fetched async and executed after the HTML is completely parsed.
+    
+    -->
 </head>
 <style>
     body {
@@ -37,6 +43,14 @@
 
         <h1> Time to get Hired!</h1>
     </marquee>
+
+    <!-- Random color generator
+    
+     const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
+const randomColor = () =>
+  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+    -->
     <main>
 
         <div>
@@ -351,6 +365,10 @@
             <h2>Coercion</h2>
         </div>
 
+        <!-- insertAdjecentHTML  to insert what you created in js to html
+        its like body.append(li)
+        -->
+
         <!-- .flat()  creates a new array  by concatenating a nested a array to one (only goes one lvl deep but can be changed)  [1,2,[4,5]] 
         flat(2) <-- add number to go deeper
         -->
@@ -370,6 +388,7 @@
         <!-- 
         slice() creates a shallow copy, kinda like a spread operator ot acts like slice too
         const animals = ['ant', 'bison', 'camel', 'duck', 'elephant]
+       
         console.log(animals.slice(2));
         expected output: Array ["camel", "duck", "elephant"]
          -->
@@ -440,10 +459,91 @@
                 find(test condition)
                 first element to pass the test
                -->
+        <!-- Number() converts the type whereas .parseInt() parses the value of input.  
 
+                .parseFloat() gives you decimal (2.5) while parseInt() only gives you the integer (2) 
+                
+                .isInfinite() is a boolean to see if value is a number 
+            -->
+
+        <!-- 
+                Numeric Separators
+                (1_000) use the underscore to give meaning
+                what js sees: (1000)
+                *can only be placed in between nums
+             -->
+        <!-- Math.abs = removes the negative sign -->
+
+
+
+        <!--    
+    Formats date to specific nation
+    
+    const now = new Date();
+    const options = {
+      hour: "numeric",
+      minute: "numeric",
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+      // weekday: 'long',
+    };
+    **This will give date in language of user**
+    // const locale = navigator.language;
+    // console.log(locale);
+
+     *How display international date*
+    labelDate.textContent = new Intl.DateTimeFormat(
+      currentAccount.locale,
+      options
+    ).format(now); 
+        ** exp display: 01/03/2022 8:22**
+-->
+
+        <!-- 
+    Formats number to specific nation
+    const num = 3884764.23
+    console.log('US:      ', new Intl.NumberFormat('en-US', options).format(num));
+
+    **US: 3,884,764.23 **
+
+ -->
+
+        <!-- querySelector = finds children 
+      closest = nearest parent   -->
+
+        <!-- ***  OOP *** -->
+        <!-- Abstraction 
+    
+    ignores minor details, exp= temp-->
+
+
+        <!-- 
+        Encapsulation
+        keeps thing private and can only be used within the class
+     -->
+
+        <!-- 
+        Inheritance 
+        Child inherits everything from parents
+      -->
+
+        <!-- 
+        Polymorphism 
+        Means a the child class can overwrite whatever it inherited 
+        
+       -->
+
+       <!-- /*
+*LOCALSTORAGE TEST*
+ const test = document.querySelector('.test');
+ localStorage.setItem('myCat', 'Tom');
+ const cat = localStorage.getItem('myCat');
+ console.log(cat);
+ test.textContent = cat;
+ */ -->
 
     </main>
-    <script src="./fundamentals.js"></script>
 
 
 
